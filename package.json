@@ -4,6 +4,8 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "author": "zeindevs",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
