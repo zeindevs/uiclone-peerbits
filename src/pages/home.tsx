@@ -2,13 +2,13 @@ import React from 'react'
 import { IoBagOutline, IoCheckmarkCircleOutline, IoPeopleOutline, IoThumbsUpOutline } from 'react-icons/io5'
 
 import Layout from '@/components/layout'
-import { SERVICES } from '@/constants/data'
+import { BLOGS, SERVICES } from '@/constants/data'
 
 const Home: React.FC = () => {
   return (
     <Layout>
       <section id="header" className="bg-white py-10 text-center">
-        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-20 md:gap-8">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-6 md:gap-12 lg:py-20">
           <span className="text-lg text-zinc-600 lg:text-xl">CUSTOM SOFTWARE DEVELOPMENT COMPANY</span>
           <h1 className="text-5xl font-medium md:text-6xl lg:text-7xl">
             Business solutions for now and a tomorrow <span className="text-primary">built on technology</span>
@@ -20,10 +20,10 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section id="" className="bg-zinc-100 py-5">
-        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-20 md:gap-12">
+      <section id="services" className="bg-zinc-100 py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-6 md:gap-12 lg:py-20">
           <div className="space-y-5">
-            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
               Software development <span className="text-primary">outsourcing services</span>
             </h2>
             <p className="text-lg text-zinc-600 lg:text-xl">
@@ -56,8 +56,104 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section id="contact-us" className="bg-zinc-950 text-white">
-        <div className="container grid max-w-6xl px-0 py-16 lg:grid-cols-2">
+      <section id="facts" className="bg-zinc-100 py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-20 md:gap-12">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
+              <span className="text-primary">Facts</span> and figures
+            </h2>
+            <p className="text-lg text-zinc-600 lg:text-xl">
+              The below stats are testimony to the fact that we as a leading offshore custom software development company have the best Offshore Remote Team Specialists.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="clients" className="bg-white py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-6 md:gap-12 lg:py-20">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
+              Our <span className="text-primary">clients</span>
+            </h2>
+            <p className="text-lg text-zinc-600 lg:text-xl">
+              Peerbits has helped global enterprises grow by delivering top-quality software aligning an expert team of dedicated offshore developers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards" className="bg-zinc-100 py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-20 md:gap-12">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
+              Awards, accolades, recognition received by <span className="text-primary">Peerbits</span>
+            </h2>
+            <p className="text-lg text-zinc-600 lg:text-xl">
+              Over the years, we have helped countless startups and enterprises by providing them with virtual development centre that has produced some top-notch solutions. Our continuous high-class work has also received many awards and recognition which are shown below.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="industry" className="bg-white py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-6 md:gap-12 lg:py-20">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
+              <span className="text-primary">Industries</span> we empower
+            </h2>
+            <p className="text-lg text-zinc-600 lg:text-xl">
+              We transform unique ideas into powerful interfaces that meet the future demands of various industries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" className="bg-zinc-100 py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-20 md:gap-12">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
+              Our <span className="text-primary">success stories</span>
+            </h2>
+            <p className="text-lg text-zinc-600 lg:text-xl">
+              Delivered industry-focused flawless digital products engaging India’s top talent every client desires.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="blogs" className="bg-white py-5">
+        <div className="container flex max-w-6xl flex-col gap-5 px-0 px-5 py-6 md:gap-12 lg:py-20">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl lg:w-[70%]">
+              Featured <span className="text-primary">blogs</span>
+            </h2>
+            <p className="text-lg text-zinc-600 lg:text-xl">
+              Stay ahead of the curve by reading our latest blogs based on real experience and the latest technology.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {BLOGS.map((item, i) => (
+              <div key={i} className="space-y-2">
+                <div>
+                  <img src={item.image} className="h-full w-full rounded-xl object-cover" alt={item.title} />
+                </div>
+                <div className="space-y-2 py-3">
+                  <time className="text-zinc-500">{item.date}</time>
+                  <p className="text-lg">{item.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a href="#" className="text-lg text-primary">
+              View more blogs
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-us" className="bg-zinc-950 py-5 text-white">
+        <div className="container grid max-w-6xl px-0 py-6 lg:grid-cols-2 lg:py-16">
           <div className="space-y-6">
             <div className="space-y-4 px-5 md:space-y-6">
               <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">
@@ -68,22 +164,22 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-2">
-              <div className="relative flex flex-col gap-1 px-5 py-8 after:absolute after:bottom-5 after:right-0 after:top-5 after:flex after:w-[3px] after:bg-gradient-to-t after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
+              <div className="relative flex flex-col gap-1 px-8 py-8 after:absolute after:bottom-5 after:right-0 after:top-5 after:flex after:w-[3px] after:bg-gradient-to-t after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
                 <IoBagOutline className="mb-2 text-5xl text-primary md:text-6xl" />
                 <p className="text-2xl font-medium md:text-3xl">12+</p>
                 <span className="text-zinc-300 md:text-lg">Years of Experience</span>
               </div>
-              <div className="relative flex flex-col gap-1 px-5 py-8 after:absolute after:bottom-0 after:left-5 after:right-5 after:flex after:h-[3px] after:bg-gradient-to-r after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
+              <div className="relative flex flex-col gap-1 px-8 py-8 after:absolute after:bottom-0 after:left-5 after:right-5 after:flex after:h-[3px] after:bg-gradient-to-r after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
                 <IoPeopleOutline className="mb-2 text-5xl text-primary md:text-6xl" />
                 <p className="text-2xl font-medium md:text-3xl">180+</p>
                 <span className="text-zinc-300 md:text-lg">In-House Talent</span>
               </div>
-              <div className="relative flex flex-col gap-1 px-5 py-8 after:absolute after:-top-1 after:left-5 after:right-5 after:flex after:h-[3px] after:bg-gradient-to-r after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
+              <div className="relative flex flex-col gap-1 px-8 py-8 after:absolute after:-top-1 after:left-5 after:right-5 after:flex after:h-[3px] after:bg-gradient-to-r after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
                 <IoCheckmarkCircleOutline className="mb-2 text-5xl text-primary md:text-6xl" />
                 <p className="text-2xl font-medium md:text-3xl">750+</p>
                 <span className="text-zinc-300 md:text-lg">Project Delivered</span>
               </div>
-              <div className="relative flex flex-col gap-1 px-5 py-8 after:absolute after:-left-1 after:bottom-5 after:top-5 after:flex after:w-[3px] after:bg-gradient-to-t after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
+              <div className="relative flex flex-col gap-1 px-8 py-8 after:absolute after:-left-1 after:bottom-5 after:top-5 after:flex after:w-[3px] after:bg-gradient-to-t after:from-zinc-950 after:via-zinc-700 after:to-zinc-950">
                 <IoThumbsUpOutline className="mb-2 text-5xl text-primary md:text-6xl" />
                 <p className="text-2xl font-medium md:text-3xl">92%</p>
                 <span className="text-zinc-300 md:text-lg">Client satisfaction rate</span>
